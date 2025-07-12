@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "6570c3bf-0ceb-40cc-8528-1880bd371b75",
+		"name": "BE TEST HIGO AWALIF GHOTAMICHA IRFAN SAPUTRA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46116227",
+		"_collection_link": "https://awalif.postman.co/workspace/Awalif's-Workspace~fa1c54cf-2771-4219-87b5-46c0dbaed87d/collection/46116227-6570c3bf-0ceb-40cc-8528-1880bd371b75?action=share&source=collection_link&creator=46116227"
+	},
+	"item": [
+		{
+			"name": "Get All Visitors (Paginated)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/visitors?page=1&limit=10",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"visitors"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Visitors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/visitors?search=John",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"visitors"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "John"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Summary (Charts)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/visitors/summary",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"visitors",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000"
+		}
+	]
+}
