@@ -21,7 +21,7 @@ function importData() {
   fs.createReadStream("dataset.csv")
     .pipe(csv())
     .on("data", (data) => {
-      console.log("📦 Row:", data);
+      console.log("Row:", data);
       results.push({
         number: Number(data["Number"]),
         locationName: data["Name of Location"],

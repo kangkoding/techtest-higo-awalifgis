@@ -10,7 +10,6 @@ app.use(express.json());
 const visitorRoutes = require("./routes/visitorRoutes");
 app.use("/visitors", visitorRoutes);
 
-
 app.get("/", (req, res) => {
   res.json({ message: "API is running!" });
 });
@@ -21,9 +20,9 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("✅ MongoDB connected");
+    console.log("MongoDB connected");
     app.listen(process.env.PORT, () => {
-      console.log(`🚀 Server running on port ${process.env.PORT}`);
+      console.log(`Server running on port ${process.env.PORT}`);
     });
   })
-  .catch((err) => console.error("❌ MongoDB error:", err));
+  .catch((err) => console.error("MongoDB error:", err));
